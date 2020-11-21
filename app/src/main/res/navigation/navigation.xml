@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragment_home">
+
+    <fragment
+        android:id="@+id/fragment_home"
+        android:name="com.example.pertemuan9_tugas.FragmentHome"
+        android:label=""
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_fgHome_to_fgTokopedia"
+            app:destination="@+id/fragment_tokopedia" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_tokopedia"
+        android:name="com.example.pertemuan9_tugas.FragmentTokopedia"
+        android:label="Tokopedia"
+        tools:layout="@layout/fragment_tokopedia">
+
+        <action
+            android:id="@+id/action_fgTokopedia_to_fgShopee"
+            app:destination="@+id/fragment_shopee" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_shopee"
+        android:name="com.example.pertemuan9_tugas.FragmentShopee"
+        android:label="Shopee"
+        tools:layout="@layout/fragment_shopee">
+
+        <action
+            android:id="@+id/action_fgShopee_to_fgBlibli"
+            app:destination="@+id/fragment_Blibli" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_Blibli"
+        android:name="com.example.pertemuan9_tugas.FragmentBlibli"
+        android:label="Blibli"
+        tools:layout="@layout/fragment_blibli">
+
+        <action
+            android:id="@+id/action_fgBlibli_to_fgHome"
+            app:destination="@+id/fragment_home"
+            app:popUpTo="@id/fragment_home"
+            app:popUpToInclusive="true"/>
+
+    </fragment>
+
+</navigation>
